@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <!-- animate.css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- CSS Reset -->
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <!-- font aweswome -->
+    <link rel="stylesheet" href="../css/all.css">
+
+    <style>
+        body {
+            background: rgba(71, 67, 67, 0.822);
+        }
+
+        #main {
+            width: 1500px;
+            height: 768px;
+            margin: auto;
+            text-align: center;
+            /* background: lightpink; */
+        }
+
+        #top {
+            width: 1500px;
+            height: 65px;
+            margin: auto;
+            /* background: paleturquoise; */
+        }
+
+        .YTlogo {
+            width: 150px;
+            height: 75px;
+            right: 775px;
+            top: 17px;
+            position: relative;
+        }
+
+        #search input {
+            text-indent: 1rem;
+            font-size: 16px;
+        }
+
+        .text {
+            width: 500px;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 20px;
+            border: 1px solid lightgrey;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            bottom: 50px;
+            left: 80px;
+            position: relative;
+        }
+
+        #search_enter {
+            width: 100px;
+            height: 40px;
+            border: 2px solid lightgrey;
+            background: #fff;
+            border-radius: 20px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            position: relative;
+            left: 1084px;
+            bottom: 94px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #search_enter a {
+            vertical-align: middle;
+            line-height: 40px;
+        }
+
+
+
+        #left {
+            width: 215px;
+            height: calc(768px - 65px);
+            /* margin-left: 12px; */
+            float: left;
+        }
+
+        #sidebar {
+            width: 215px;
+            height: 768px;
+            text-align: left;
+            color: #000;
+            cursor: pointer;
+            position: absolute;
+            left: 110px;
+            top: 150px;
+        }
+
+        #sidebar a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .channel img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+
+        button {
+            width: 215px;
+            height: 30px;
+            font-size: 16px;
+            font-family: "微軟正黑體";
+            font-weight: bolder;
+            background: #999;
+        }
+
+        .line-1 {
+            border: 1px dashed #333;
+        }
+
+        .line-2 {
+            border: 1px dashed #333;
+        }
+
+
+        #content {
+            width: calc(1500px);
+        }
+
+        #account img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 1px solid #999;
+            position: relative;
+            left: 500px;
+            bottom: 30px;
+        }
+
+        .bird {
+            left: 820px;
+            bottom: 110px;
+            position: relative;
+        }
+
+        #content1 {
+            width: calc(1500px - 215px - 15px - 15px);
+            height: 300px;
+            float: right;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        #content2 {
+            width: calc(1500px - 215px - 15px - 15px);
+            height: 300px;
+            float: right;
+            display: flex;
+            margin-top: 50px;
+            flex-wrap: nowrap;
+        }
+
+        #content3 {
+            width: calc(1500px - 215px - 15px - 15px);
+            height: 300px;
+            float: right;
+            display: flex;
+            margin-top: 50px;
+            flex-wrap: nowrap;
+        }
+
+
+
+        /* 卡片樣式 1 */
+        .card-1 {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .card-1 img {
+            width: 300px;
+            height: 168px;
+        }
+
+        .card-2 {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-right: 15px;
+
+        }
+
+        .card-2 img {
+            width: 300px;
+            height: 168px;
+        }
+
+        .card-3 {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-right: 15px;
+
+        }
+
+        .card-3 img {
+            width: 300px;
+            height: 168px;
+        }
+
+
+        .card-4 {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            flex-wrap: wrap;
+            margin-right: 15px;
+
+        }
+
+        .card-4 img {
+            width: 300px;
+            height: 168px;
+        }
+
+        .card-5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .card-5 img {
+            width: 300px;
+            height: 168px;
+        }
+
+        .card-6 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .card-6 img {
+            width: 300px;
+            height: 168px;
+        }
+
+
+        .card-7 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .card-7 img {
+            width: 300px;
+            height: 168px;
+        }
+
+        .card-8 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-8 img {
+            width: 300px;
+            height: 168px;
+        }
+
+        .card-9 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .card-9 img {
+            width: 300px;
+            height: 168px;
+        }
+
+        .card-10 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .card-10 img {
+            width: 300px;
+            height: 168px;
+        }
+
+
+        .card-11 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .card-11 img {
+            width: 300px;
+            height: 168px;
+        }
+
+        .card-12 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+            background-color: #999;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-12 img {
+            width: 300px;
+            height: 168px;
+        }
+
+        .info h3 {
+            margin-left: 10px;
+        }
+
+        /* 卡片內容區 */
+        .card_content {
+            display: flex;
+            padding: 16px;
+            /* gap: 12px; */
+        }
+
+        /* 頻道頭像 */
+        .channel_author img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid #eee;
+        }
+
+        /* 影片資訊 */
+        .channel_info {
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            vertical-align: bottom;
+
+        }
+
+        .video_title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+            text-align: left;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="top">
+            <div id="logo"><a href="https://www.youtube.com/" target="blank">
+                    <img class="YTlogo"
+                        src="https://www.freeiconspng.com/uploads/youtube-logo-png-free-download-30.png"></a></div>
+            <div id="search"><input class="text" type="text" placeholder="搜尋"></div>
+            <div id="search_enter">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <div id="account"><img
+                        src="https://yt3.ggpht.com/yti/ANjgQV8AKCDm4SKc82YNI3bMbBygCVX5z98WCZ0tPZTi7gnEjmY=s88-c-k-c0x00ffffff-no-rj">
+                </div>
+            </div>
+            <div class="bird"><a href="./YT_images/文鳥.jpg"><i class="fa-solid fa-crow"></i></a></div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="left">
+            <div id="sidebar">
+                <div class="logal"><a href="./hw_YT(new).html" target="_top">
+                        <i class="fa-solid fa-house"></i> 首頁</a></div>
+                <br>
+                <div class="logal"><i class="fa-brands fa-think-peaks"></i> Shorts</div><br>
+                <div class="logal"><i class="fa-brands fa-square-youtube"></i> 訂閱</div><br>
+                <div class="line-1"></div>
+                <p>我 ＞</p>
+                <div class="logal"><i class="fa-regular fa-circle-user"></i> 我的頻道</div><br>
+                <div class="logal"><i class="fa-regular fa-clock"></i> 歷史紀錄</div><br>
+                <div class="logal"><i class="fa-regular fa-rectangle-list"></i> 播放列表</div><br>
+                <div class="logal"><i class="fa-regular fa-file-video"></i> 我的視頻</div><br>
+                <div class="logal"><i class="fa-solid fa-clock-rotate-left"></i> 稍後觀看</div><br>
+                <div class="logal"><i class="fa-regular fa-thumbs-up"></i> 讚過的視頻</div><br>
+                <div class="line-2"></div><br>
+                <p>訂閱</p>
+                <div class="channel"><img src="https://lurl.cc/g7jC51"> Muse 木棉花...
+                    <img id="live" src="./YT_images/live.png">
+                </div><br>
+                <div class="channel"><img src="https://lurl.cc/1pinNT"> MJ日語
+                    <img id="live" src="./YT_images/live.png">
+                </div><br>
+                <div class="channel"><img src="https://lurl.cc/2Uymis"> Onion Man
+                    <img id="live" src="./YT_images/live.png">
+                </div><br>
+                <div class="channel"><img src="https://lurl.cc/66HIux"> 台灣啟示錄
+                    <img id="live" src="./YT_images/live.png">
+                </div><br>
+                <div class="channel"><img src="https://lurl.cc/Dl3q7b"> 台灣地震監視
+                    <img id="live" src="./YT_images/live.png">
+                </div><br>
+                <div class="channel"><img src="https://lurl.cc/1behJy"> ETtoday寵物雲
+                    <img id="live" src="./YT_images/live.png">
+                </div><br>
+                <button>展開</button>
+            </div>
+        </div>
+        <div class="content">
+            <div id="content1">
+                <div class="card-1">
+                    <a href="https://lurl.cc/2UbHQD">
+                        <img src="https://lurl.cc/gs0FOw"></a>
+                    <div class="card_content">
+                        <div class="channel_author">
+                            <a href="https://www.youtube.com/@Eassy_drawing">
+                                <img src="https://lurl.cc/p7PE0m" /></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="video_title">中輟猴的一生</h3>
+                            <p class="channel_info">
+                                隨意畫<br>
+                                9.3萬次觀看 • 2個月前</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-2">
+                    <a href="https://lurl.cc/7ncOR6">
+                        <img src="https://lurl.cc/pARKx0"></a>
+                    <div class="card_content">
+                        <div class="channel_author">
+                            <a href="https://www.youtube.com/@Eassy_drawing">
+                                <img src="https://lurl.cc/p7PE0m" /></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="video_title">低薪猴的一生 | 物價一年漲1倍 | 薪水一年漲1K</h3>
+                            <p class="channel_info">
+                                隨意畫<br>
+                                7.7萬次觀看 • 6天前</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-3">
+                    <a href="https://youtu.be/rYLzy7hIIM0?si=ongkRMi5-TgssR8o">
+                        <img
+                            src="https://i.ytimg.com/vi/rYLzy7hIIM0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmrfrtmnePwDgU1wmpHLhJrtKcaw"></a>
+                    <div class="card_content">
+                        <div class="channel_author">
+                            <a href="https://www.youtube.com/@Eassy_drawing">
+                                <img src="https://lurl.cc/p7PE0m" /></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="video_title">炒幣猴的一生(上) | ALL IN | 隨意畫</h3>
+                            <p class="channel_info">
+                                隨意畫<br>
+                                4.3萬次觀看 • 7天前</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-4">
+                    <a href="https://youtu.be/8ruadDIZYuU?si=fpZmfQGNOaNnmwYp">
+                        <img
+                            src="https://i.ytimg.com/vi/8ruadDIZYuU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAeI8oLUTNvxj00vCQaPcpd_k_9hA"></a>
+                    <div class="card_content">
+                        <div class="channel_author">
+                            <a href="https://www.youtube.com/@Eassy_drawing">
+                                <img src="https://lurl.cc/p7PE0m" /></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="video_title">炒幣猴的一生(下) | ALLIN |</h3>
+                            <p class="channel_info">
+                                隨意畫<br>
+                                1萬次觀看 • 1天前</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="content2">
+                <div class="card-5">
+                    <a href="https://youtu.be/cb-5qtiy2-U?si=rcH0BhIkyFAIQTJx">
+                        <img
+                            src="https://i.ytimg.com/vi/cb-5qtiy2-U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJ2pCYMBmOBZmKE7Uh_B1fNEGl7A"></a>
+                    <div class="card_content">
+                        <div class="channel_author">
+                            <a href="https://www.youtube.com/@mjjapanese">
+                                <img
+                                    src="https://yt3.ggpht.com/lup4yoHUfNO5xXAWVLeIzNRtTWWhgKk1WvtesRYfjOA6ZXiyxz1lhUmDv3ACKnrfI1bp75fP=s176-c-k-c0x00ffffff-no-rj-mo" /></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="video_title">預約與點餐的關鍵短語! | Ep.192</h3>
+                            <p class="channel_info">
+                                MJ日語<br>
+                                2.9萬次觀看 • 8個月前</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-6">
+                    <a href="https://youtu.be/1j_OQK_Zi4o?si=pLEu7jS8Hw4dTjh5">
+                        <img
+                            src="https://i.ytimg.com/vi/1j_OQK_Zi4o/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAcsUiWMEOBpbCZnlad1UG_YOjLDw"></a>
+                    <div class="card_content">
+                        <div class="channel_author">
+                            <a href="https://www.youtube.com/@mjjapanese">
+                                <img
+                                    src="https://yt3.ggpht.com/lup4yoHUfNO5xXAWVLeIzNRtTWWhgKk1WvtesRYfjOA6ZXiyxz1lhUmDv3ACKnrfI1bp75fP=s176-c-k-c0x00ffffff-no-rj-mo" /></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="video_title">日本商店流場結帳 45句日語會話實用指南!</h3>
+                            <p class="channel_info">
+                                MJ日語<br>
+                                4.1萬次觀看 • 8個月前</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-7">
+                    <a href="https://youtu.be/ciIq2dbDDcQ?si=5YDFE-2ViQrBUhph">
+                        <img
+                            src="https://i.ytimg.com/vi/ciIq2dbDDcQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAm7-MedKYDpmhFn5x0X8AN0A1qOg"></a>
+                    <div class="card_content">
+                        <div class="channel_author">
+                            <a href="https://www.youtube.com/@mjjapanese">
+                                <img
+                                    src="https://yt3.ggpht.com/lup4yoHUfNO5xXAWVLeIzNRtTWWhgKk1WvtesRYfjOA6ZXiyxz1lhUmDv3ACKnrfI1bp75fP=s176-c-k-c0x00ffffff-no-rj-mo" /></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="video_title">零基礎來日本旅遊也能輕鬆搞定 | Ep.134</h3>
+                            <p class="channel_info">
+                                MJ日語<br>
+                                9.3萬次觀看 • 2個月前</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-8">
+                    <a href="https://youtu.be/2G7WEZiIj1k?si=BjHqt7UNChLvgL5e">
+                        <img
+                            src="https://i.ytimg.com/vi/2G7WEZiIj1k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9Tip7jtCPVnMsyYBLoaSiG37Otw"></a>
+                    <div class="card_content">
+                        <div class="channel_author">
+                            <a href="https://www.youtube.com/@mjjapanese">
+                                <img
+                                    src="https://yt3.ggpht.com/lup4yoHUfNO5xXAWVLeIzNRtTWWhgKk1WvtesRYfjOA6ZXiyxz1lhUmDv3ACKnrfI1bp75fP=s176-c-k-c0x00ffffff-no-rj-mo" /></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="video_title">日本留學旅遊必學 練習在銀行會用到的句子!</h3>
+                            <p class="channel_info">
+                                MJ日語<br>
+                                1.6萬次觀看 • 3年前</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content3">
+                <div class="card-9">
+                    <a href="https://youtu.be/Q8TfYO8jx94?si=0zjGRn7GGeqcx3Qn">
+                        <img
+                            src="https://i.ytimg.com/vi/Q8TfYO8jx94/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZYSYJ1ko2U-uvgUSLpJEQUUYd5g"></a>
+                    <div class="card_content">
+                        <div class="channel_author">
+                            <a href="https://www.youtube.com/@onion_man">
+                                <img
+                                    src="https://yt3.googleusercontent.com/ytc/AIdro_nRZ2vp1cVGjuxa0RoTVN9Z6dPgwDS2VJmoLPG3FlPVDMeT=s176-c-k-c0x00ffffff-no-rj-mo" /></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="video_title">廚神洋蔥之洋蔥裝逼史, 全國級的廚師水準!</h3>
+                            <p class="channel_info">
+                                Onion Man<br>
+                                200萬次觀看 • 4年前</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-10">
+                    <a href="https://youtu.be/JJ3GiUd4Omg?si=xQ-90GJJh188TiAU">
+                        <img
+                            src="https://i.ytimg.com/vi/JJ3GiUd4Omg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBb0kcVjzRFABKreEL1aHYrn7-D3w"></a>
+                    <div class="card_content">
+                        <div class="channel_author">
+                            <a href="https://www.youtube.com/@onion_man">
+                                <img
+                                    src="https://yt3.googleusercontent.com/ytc/AIdro_nRZ2vp1cVGjuxa0RoTVN9Z6dPgwDS2VJmoLPG3FlPVDMeT=s176-c-k-c0x00ffffff-no-rj-mo" /></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="video_title">20年前折疊式手機有多潮? 洋蔥的手機進化史篇</h3>
+                            <p class="channel_info">
+                                Onion Man<br>
+                                71萬次觀看 • 5個月前</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-11">
+                    <a href="https://youtu.be/scOfqJpnSd0?si=V9gJu0Wz_gmJOwNR">
+                        <img
+                            src="https://i.ytimg.com/vi/scOfqJpnSd0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7HS1KoDY1ByxLBpi8wLtXxMgBzA"></a>
+                    <div class="card_content">
+                        <div class="channel_author">
+                            <a href="https://www.youtube.com/@onion_man">
+                                <img
+                                    src="https://yt3.googleusercontent.com/ytc/AIdro_nRZ2vp1cVGjuxa0RoTVN9Z6dPgwDS2VJmoLPG3FlPVDMeT=s176-c-k-c0x00ffffff-no-rj-mo" /></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="video_title">一天爆吃10頓甜點! 沖繩紫色美食之旅!</h3>
+                            <p class="channel_info">
+                                Onion Man<br>
+                                52萬次觀看 • 4個月前</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-12">
+                    <a href="https://youtu.be/f9k5_X3RnDw?si=1BVNLZSpfRVvIYrg">
+                        <img
+                            src="https://i.ytimg.com/vi/f9k5_X3RnDw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCYi_TcVTxRyiZLSCrMZiVuvOAUvQ"></a>
+                    <div class="card_content">
+                        <div class="channel_author">
+                            <a href="https://www.youtube.com/@onion_man">
+                                <img
+                                    src="https://yt3.googleusercontent.com/ytc/AIdro_nRZ2vp1cVGjuxa0RoTVN9Z6dPgwDS2VJmoLPG3FlPVDMeT=s176-c-k-c0x00ffffff-no-rj-mo" /></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="video_title">洋蔥讀高中時的各種忍術 | 高中回憶第二集</h3>
+                            <p class="channel_info">
+                                Onion Man<br>
+                                202萬次觀看 • 5年前</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
