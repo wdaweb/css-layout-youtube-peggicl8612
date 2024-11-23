@@ -12,15 +12,16 @@
     <!-- CSS Reset -->
     <!-- <link rel="stylesheet" href="./css/reset.css"> -->
     <!-- font aweswome -->
-    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="./css/all.css">
 
     <style>
         body {
             background: rgba(71, 67, 67, 0.822);
+            width: 100%;
         }
 
         #main {
-            width: 1500px;
+            width: 1600px;
             height: 768px;
             margin: auto;
             text-align: center;
@@ -96,7 +97,7 @@
             color: #000;
             cursor: pointer;
             position: absolute;
-            left: 110px;
+            left: 65px;
             top: 150px;
         }
 
@@ -145,43 +146,99 @@
             bottom: 30px;
         }
 
-        .bird {
-            left: 820px;
-            bottom: 110px;
+        #account details {
+            position: relative;
+            margin: auto;
+        }
+
+        #account ul {
+            width: 200px;
+            padding: 10px;
+            list-style: none;
+            text-align: center;
+            background: darkcyan;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            position: relative;
+            left: 330px;
+            bottom: 45px;
+            text-align: left;
+        }
+
+        /* #account ul li {
+            padding: 10px;
+        } */
+
+        #account ul li a {
+            display: inline-block;
+            text-decoration: none;
+            color: #333;
+            line-height: 40px;
+        }
+
+        #account ul li a:hover {
+            background-color: #f0f0f0;
+        }
+
+        summary {
+            list-style-type: none;
+            text-align: center;
+
+        }
+
+
+        #bird {
+            left: 830px;
+            bottom: 112px;
             position: relative;
         }
 
+        #bird a:visited {
+            color: #fff;
+        }
+
+        #frog {
+            left: 790px;
+            bottom: 130px;
+            position: relative;
+        }
+
+
+        #frog a:visited {
+            color: palegreen;
+        }
+
         #content1 {
-            width: calc(1500px - 215px - 15px - 15px);
+            width: calc(1600px - 215px - 15px - 15px);
             height: 300px;
             float: right;
-            display: flex;
+            display: inline-block;
             flex-wrap: nowrap;
+
         }
 
         #content2 {
-            width: calc(1500px - 215px - 15px - 15px);
+            width: calc(1600px - 215px - 15px - 15px);
             height: 300px;
             float: right;
-            display: flex;
+            display: inline-block;
             margin-top: 50px;
             flex-wrap: nowrap;
         }
 
         #content3 {
-            width: calc(1500px - 215px - 15px - 15px);
+            width: calc(1600px - 215px - 15px - 15px);
             height: 300px;
             float: right;
-            display: flex;
+            display: inline-block;
             margin-top: 50px;
             flex-wrap: nowrap;
         }
 
 
 
-        /* 卡片樣式 1 */
         .card-1 {
-            display: flex;
+            display: inline-block;
             flex-direction: column;
             width: 300px;
             height: 300px;
@@ -190,6 +247,7 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             margin-right: 15px;
+            border: 3px inset #999;
         }
 
         .card-1 img {
@@ -198,7 +256,7 @@
         }
 
         .card-2 {
-            display: flex;
+            display: inline-block;
             flex-direction: column;
             width: 300px;
             height: 300px;
@@ -207,6 +265,8 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             margin-right: 15px;
+            border: 3px inset #999;
+
 
         }
 
@@ -216,7 +276,7 @@
         }
 
         .card-3 {
-            display: flex;
+            display: inline-block;
             flex-direction: column;
             width: 300px;
             height: 300px;
@@ -225,6 +285,8 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             margin-right: 15px;
+            border: 3px inset #999;
+
 
         }
 
@@ -235,7 +297,7 @@
 
 
         .card-4 {
-            display: flex;
+            display: inline-block;
             flex-direction: column;
             width: 300px;
             height: 300px;
@@ -245,6 +307,8 @@
             overflow: hidden;
             flex-wrap: wrap;
             margin-right: 15px;
+            border: 3px inset #999;
+
 
         }
 
@@ -254,7 +318,7 @@
         }
 
         .card-5 {
-            display: flex;
+            display: inline-block;
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -265,6 +329,8 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             margin-right: 15px;
+            border: 3px inset #999;
+
         }
 
         .card-5 img {
@@ -273,7 +339,7 @@
         }
 
         .card-6 {
-            display: flex;
+            display: inline-block;
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -284,6 +350,8 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             margin-right: 15px;
+            border: 3px inset #999;
+
         }
 
         .card-6 img {
@@ -293,7 +361,7 @@
 
 
         .card-7 {
-            display: flex;
+            display: inline-block;
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -304,6 +372,8 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             margin-right: 15px;
+            border: 3px inset #999;
+
         }
 
         .card-7 img {
@@ -312,7 +382,7 @@
         }
 
         .card-8 {
-            display: flex;
+            display: inline-block;
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -322,6 +392,8 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            border: 3px inset #999;
+
         }
 
         .card-8 img {
@@ -330,7 +402,7 @@
         }
 
         .card-9 {
-            display: flex;
+            display: inline-block;
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -341,6 +413,8 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             margin-right: 15px;
+            border: 3px inset #999;
+
         }
 
         .card-9 img {
@@ -349,7 +423,7 @@
         }
 
         .card-10 {
-            display: flex;
+            display: inline-block;
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -360,6 +434,8 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             margin-right: 15px;
+            border: 3px inset #999;
+
         }
 
         .card-10 img {
@@ -369,7 +445,7 @@
 
 
         .card-11 {
-            display: flex;
+            display: inline-block;
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -380,6 +456,8 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             margin-right: 15px;
+            border: 3px inset #999;
+
         }
 
         .card-11 img {
@@ -388,7 +466,7 @@
         }
 
         .card-12 {
-            display: flex;
+            display: inline-block;
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -398,6 +476,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            border: 3px inset #999;
         }
 
         .card-12 img {
@@ -409,7 +488,6 @@
             margin-left: 10px;
         }
 
-        /* 卡片內容區 */
         .card_content {
             display: flex;
             padding: 16px;
@@ -454,11 +532,40 @@
             <div id="search"><input class="text" type="text" placeholder="搜尋"></div>
             <div id="search_enter">
                 <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <div id="account"><img
-                        src="https://yt3.ggpht.com/yti/ANjgQV8AKCDm4SKc82YNI3bMbBygCVX5z98WCZ0tPZTi7gnEjmY=s88-c-k-c0x00ffffff-no-rj">
+                <div id="account">
+                    <details>
+                        <summary>
+                            <img
+                                src="https://yt3.ggpht.com/yti/ANjgQV8AKCDm4SKc82YNI3bMbBygCVX5z98WCZ0tPZTi7gnEjmY=s88-c-k-c0x00ffffff-no-rj">
+                        </summary>
+                        <ul>
+                            <li>查看你的頻道</li>
+                            <hr>
+                            <li><a href="#">Google帳號</a></li>
+                            <li><a href="#">切換帳號 　　　　 ＞</a></li>
+                            <li><a href="#">退出帳號</a></li>
+                            <hr>
+                            <li><a href="#">YouTube工作室</a></li>
+                            <li><a href="#">購買內容和會員</a></li>
+                            <hr>
+                            <li><a href="#">YouTube個人數據管理</a></li>
+                            <li><a href="#">外觀: 設備主題 　　＞</a></li>
+                            <li><a href="#">語言: 中文　　 　　＞</a></li>
+                            <li><a href="#">受限模式: 關閉 　　＞</a></li>
+                            <li><a href="#">位置: 台灣　　　　 ＞</a></li>
+                            <li><a href="#">鍵盤快捷鍵</a></li>
+                            <hr>
+                            <li><a href="#">設置</a></li>
+                            <hr>
+                            <li><a href="#">幫助</a></li>
+                            <li><a href="#">發送反饋</a></li>
+                            <li></li>
+                        </ul>
+                    </details>
                 </div>
             </div>
-            <div class="bird"><a href="./YT_images/文鳥.jpg"><i class="fa-solid fa-crow"></i></a></div>
+            <div id="bird"><a href="./YT_images/文鳥.jpg"><i class="fa-solid fa-crow"></i></a></div>
+            <div id="frog"><a href="./YT_images/青蛙.jpg"><i class="fa-solid fa-frog"></i></a></div>
         </div>
         <br>
         <br>
